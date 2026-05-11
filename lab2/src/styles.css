@@ -1,0 +1,215 @@
+/* === FER202 Practical Exam - Custom styles to match teacher's screenshots === */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #fff;
+}
+
+/* Navbar */
+.app-navbar {
+  background: #20b2aa; /* teal/green */
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app-navbar .nav-left { display: flex; gap: 18px; align-items: center; }
+.app-navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.app-navbar a.active-home { color: #ffd400; }
+.app-navbar .cart-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+}
+.app-navbar .cart-count {
+  background: #fff;
+  color: #20b2aa;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* Layout */
+.app-container {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Home with sidebar */
+.home-wrapper { display: flex; gap: 24px; }
+.sidebar {
+  width: 200px;
+  background: #f7f7f7;
+  padding: 16px;
+  border-radius: 6px;
+  height: fit-content;
+}
+.sidebar h4 { margin-top: 0; }
+.cat-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.cat-btn.active { background: #1976d2; color: #fff; }
+.cat-btn:hover:not(.active) { background: #e0e0e0; }
+
+.main-area { flex: 1; }
+
+/* Product grid */
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.product-card h5 { margin: 0 0 8px 0; font-weight: bold; }
+.product-card p { margin: 4px 0; }
+.btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+.btn-primary { background: #1976d2; color: #fff; }
+.btn-primary:hover { background: #1565c0; }
+.btn-success { background: #2e7d32; color: #fff; }
+.btn-success:hover { background: #1b5e20; }
+.btn-danger { background: #d32f2f; color: #fff; }
+.btn-sm { padding: 4px 10px; font-size: 13px; }
+
+/* Product list controls */
+.controls-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.controls-row input,
+.controls-row select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.controls-row input { flex: 1; min-width: 240px; }
+
+/* Detail */
+.detail-product {
+  margin-bottom: 24px;
+}
+.detail-product h2 { margin-bottom: 8px; }
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.alert-danger {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.review-form {
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+.review-form input,
+.review-form textarea,
+.review-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.review-list { list-style: none; padding: 0; max-width: 700px; }
+.review-list li {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.review-item .review-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.review-item .review-comment {
+  color: #444;
+  margin-bottom: 6px;
+}
+.review-item .review-stars {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* Cart table */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+.cart-table th, .cart-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.cart-table th { background: #f5f5f5; }
+.cart-table tr:nth-child(even) td { background: #fafafa; }
+.qty-input { width: 60px; text-align: center; padding: 4px; }
+
+/* Checkout */
+.checkout-form { max-width: 500px; }
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
